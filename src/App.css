@@ -1,38 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .App {
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #ffffff, #fceaff);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(190, 120, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  background: linear-gradient(to right, #e17ea9, #ff61d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #b155d6;
+  border-bottom: 2px dashed #ff8ad8;
+  padding-bottom: 0.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff8dbe;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 141, 190, 0.4);
+}
+
+button {
+  padding: 0.8rem;
+  background-color: #ff8dbe;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff61d5;
+}
+
+.result {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #eaf6fd;
+  border-left: 5px solid #ff8ad8;
+  border-radius: 6px;
+}
+
+.error {
+  margin-top: 1rem;
+  color: red;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading {
+  margin-top: 1rem;
+  text-align: center;
+  color: #999;
+  font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 640px) {
+  .App {
+    margin: 1rem;
+    padding: 1rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  input,
+  select,
+  button {
+    font-size: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.5rem;
   }
 }
